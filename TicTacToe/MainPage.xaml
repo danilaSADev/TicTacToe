@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicTacToe.MainPage">
+    
+    <StackLayout x:Name="Stacked"
+                 VerticalOptions="Center">
+        
+        <Label FontSize="Large"  
+               Text="Tic-Tac-Toe Game" 
+               HorizontalOptions="CenterAndExpand"/>
+        <Label x:Name="winnerLabel"
+               TextColor="LightGray"
+               Text="Player 'X' won!" 
+               FontSize="Medium" 
+               HorizontalOptions="CenterAndExpand"/>
+        <Grid RowDefinitions="70,70,70"
+              ColumnDefinitions="70,70,70"
+              x:Name="GameBoard"
+              VerticalOptions="FillAndExpand"
+              HorizontalOptions="CenterAndExpand">
+        </Grid>
+        <Button Text="Reset" 
+                HorizontalOptions="CenterAndExpand"
+                Clicked="_OnResetGame"/>
+    </StackLayout>
+
+</ContentPage>
